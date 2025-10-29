@@ -15,8 +15,6 @@ const AISummary = ({ earthquakes }) => {
   const [isGenerated, setIsGenerated] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
 
-  // REMOVED: useEffect - no auto-generation!
-
   const generateSummaries = async () => {
     if (earthquakes.length === 0) {
       setError("No earthquake data available to analyze.");
