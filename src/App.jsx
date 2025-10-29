@@ -4,6 +4,7 @@ import Sidebar from "./components/Sidebar";
 import FilterPanel from "./components/FilterPanel";
 import Statistics from "./components/Statistics";
 import { useEarthquakes } from "./hooks/useEarthquakes";
+import AISummary from "./components/AISummary";
 
 function App() {
   const { earthquakes, loading, error, lastUpdated, refetch } =
@@ -240,6 +241,8 @@ function App() {
       <main className="relative container mx-auto px-4 py-8">
         {/* Statistics */}
         <Statistics earthquakes={filteredEarthquakes} />
+
+        <AISummary earthquakes={filteredEarthquakes} />
 
         {/* Filters */}
         <FilterPanel

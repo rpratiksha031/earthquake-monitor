@@ -14,6 +14,8 @@ import {
   getTimeAgo,
 } from "../utils/helpers";
 
+import AIInsightButton from "./AIInsightButton";
+
 // Simple map controller
 const MapController = ({ selectedEarthquake }) => {
   const map = useMap();
@@ -116,6 +118,8 @@ const QuickMarker = React.memo(({ earthquake, isSelected, onSelect }) => {
             More Details →
           </a>
         </div>
+
+        <AIInsightButton earthquake={earthquake} />
       </Popup>
     </CircleMarker>
   );
